@@ -8,6 +8,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { getVisitCount } from "../../../lib/db";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -17,6 +18,8 @@ export default async function Post(props: Params) {
     return notFound();
   }
 
+  const visitCount = await getVisitCount();
+  const title = post.title.replace("{visitCount}", visitCount.toString());
   const content = await markdownToHtml(post.content || "");
 
   return (
@@ -26,7 +29,7 @@ export default async function Post(props: Params) {
         <Header />
         <article className="mb-32">
           <PostHeader
-            title={post.title}
+            title={title}
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}

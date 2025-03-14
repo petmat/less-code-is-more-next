@@ -6,6 +6,7 @@ import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
+import { getVisitCount } from "../lib/db";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const visitCount = await getVisitCount();
+
   return (
     <html lang="en">
       <head>
@@ -62,7 +65,7 @@ export default function RootLayout({
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
-        <Footer />
+        <Footer visitCount={visitCount} />
       </body>
     </html>
   );
