@@ -38,7 +38,15 @@ const config: Config = {
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
     },
+    hljs: {
+      theme: "github-dark",
+    },
   },
-  plugins: [],
+  plugins: [require("tailwind-highlightjs")],
+  safelist: [
+    {
+      pattern: /hljs+/,
+    },
+  ],
 };
 export default config;
