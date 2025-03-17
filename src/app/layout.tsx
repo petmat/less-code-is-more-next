@@ -1,12 +1,13 @@
 import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
-import { getVisitCount } from "../lib/db";
+import { addVisit, getVisitCount } from "../lib/db";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const visitCount = await getVisitCount();
+  const visitCount = (await getVisitCount()) + 1;
+  const reqHeaders = await headers();
+  const visit = {
+    remoteAddress: reqHeaders.get("client-ip"),
+    userAgent: reqHeaders.get("user-agent"),
+    time: new Date().toISOString(),
+  };
+  await addVisit(visit);
 
   return (
     <html lang="en">
