@@ -1,6 +1,5 @@
 ---
 title: Serverless TypeScript
-excerpt: "I love Serverless and TypeScript ❤. I also think Serverless is the best thing that has happened to the backend and TypeScript is the best thing that has happened to Node.js. So it makes sense combining the two to make something awesome."
 coverImage: "/assets/blog/serverless-typescript/title.jpg"
 date: "2019-08-05T12:00:00.000Z"
 author:

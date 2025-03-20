@@ -1,6 +1,5 @@
 ---
 title: Bringing the Types back to the Back
-excerpt: "In this post, I will dive into how TypeScript can be utilized on the Backend. TypeScript is much more widely in use on the frontend, but it suites the backend just as well."
 coverImage: "/assets/blog/bringing-the-types-back/bring-it.svg"
 date: "2019-06-13T12:00:00.000Z"
 author:

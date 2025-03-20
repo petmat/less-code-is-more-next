@@ -1,6 +1,5 @@
 ---
 title: Hello visitor number {visitCount}!
-excerpt: "For some reason, 🙄 visit counters are not so popular anymore. There are undoubtedly younger web devs that have never seen one. That and for no other particular reason, I thought it would be cool to bring them back."
 coverImage: "/assets/blog/hello-visitor/hola.jpg"
 date: "2020-07-23T12:00:00.000Z"
 author:

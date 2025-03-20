@@ -1,6 +1,5 @@
 ---
 title: React and Serverless
-excerpt: "Last week I was extremely lucky to get to attend two amazing events held here in my home town Helsinki. And I even got to talk at one of them. Slightly unfortunately the events overlapped a bit so I could not be present at React Finland for both thursday and friday."
 coverImage: "/assets/blog/react-and-serverless/title.png"
 date: "2019-04-30T22:12:03.284Z"
 author:

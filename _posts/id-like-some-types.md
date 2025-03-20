@@ -1,6 +1,5 @@
 ---
 title: I'd like some Type in my Script instead of Java, please!
-excerpt: "This post is a part of a larger TypeScript in the Back series. TypeScript is taking the web and JavaScript development world by storm and it has some interesting implications on how we do things. This is the first part of the series."
 coverImage: "/assets/blog/id-like-some-types/typescript-state-of-js.png"
 date: "2019-06-06T12:00:00.000Z"
 author:

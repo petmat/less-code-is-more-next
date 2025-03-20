@@ -1,6 +1,5 @@
 ---
 title: Bonus Round - Utility Types - Part 1
-excerpt: "My previous post was the final part of the TypeScript in the Back series but I just could not help myself not to write another TypeScript post! So I'm calling this one a bonus round and the topic is Utility Types. These types have been a mystery for me a long time until recently so I thought that might be the case for others as well."
 coverImage: "/assets/blog/utility-types-part1/title.jpg"
 date: "2019-10-25T12:00:00.000Z"
 author:

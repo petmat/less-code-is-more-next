@@ -1,6 +1,5 @@
 ---
 title: Types Are Not Tests and Tests Are Not Types
-excerpt: "In this post, I write about something that I think does not get enough attention. Testing is an important part of any software development and the JavaScript ecosystem has from the start established good tools for writing tests. However, the picture changes quite significantly with TypeScript."
 coverImage: "/assets/blog/types-are-not-tests/title.jpg"
 date: "2019-07-04T12:00:00.000Z"
 author:

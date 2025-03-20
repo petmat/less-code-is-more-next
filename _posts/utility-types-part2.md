@@ -1,6 +1,5 @@
 ---
 title: Bonus Round - Utility Types - Part 2
-excerpt: "Utility Types have been a mystery for me a long time until recently so I thought that might be the case for others as well and maybe I should write about them. The main reason why I think utility types are so awesome is that often when dealing with JavaScript code and libraries there's a need for complex typing."
 coverImage: "/assets/blog/utility-types-part2/title.jpg"
 date: "2019-11-07T12:00:00.000Z"
 author:
