@@ -381,7 +381,7 @@ export default VisitCounter;
 
 I spiced it up with some CSS visuals to make it more old school like. Here's what it looks like (zoomed in):
 
-![The final counter](./final_counter.png)
+![The final counter](/assets/blog/hello-visitor/final_counter.png)
 
 You can run the Gatsby app with the Netlify functions locally by using the Netlify CLI
 

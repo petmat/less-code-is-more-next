@@ -1,13 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
-      <Link href="/" className="hover:underline">
-        Blog
+    <h1>
+      <Link href="/">
+        <Image
+          src="/assets/less-code-is-more.svg"
+          alt="Less Code Is More"
+          width={300}
+          height={19}
+        />
       </Link>
-      .
-    </h2>
+    </h1>
   );
 };
 

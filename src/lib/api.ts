@@ -19,6 +19,7 @@ const dataSchema = z.object({
   ogImage: z.object({
     url: z.string(),
   }),
+  hashtags: z.string().optional(),
 });
 
 const postsDirectory = join(process.cwd(), "_posts");

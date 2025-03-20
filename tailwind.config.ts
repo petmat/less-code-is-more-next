@@ -27,6 +27,10 @@ const config: Config = {
       letterSpacing: {
         tighter: "-.04em",
       },
+      fontFamily: {
+        sans: ["var(--font-roboto)"],
+        script: ["var(--font-kaushan-script)"],
+      },
       fontSize: {
         "5xl": "2.5rem",
         "6xl": "2.75rem",
@@ -36,6 +40,9 @@ const config: Config = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
+      },
+      maxWidth: {
+        "1.5xl": "40rem",
       },
       hljs: {
         theme: "github-dark",

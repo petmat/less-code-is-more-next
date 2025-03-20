@@ -1,22 +1,27 @@
-import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter } from "next/font/google";
+import { Roboto, Kaushan_Script } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
-import { addVisit, getVisitCount } from "../lib/db";
+import { addVisit } from "../lib/db";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
+
+const kaushanScript = Kaushan_Script({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-kaushan-script",
+});
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
+  title: "Less Code Is More",
+  description:
+    "A blog about serverless, functional programming, web development, machine learning and all the fun stuff.",
 };
 
 export default async function RootLayout({
@@ -24,7 +29,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const visitCount = (await getVisitCount()) + 1;
   const reqHeaders = await headers();
   const visit = {
     remoteAddress: reqHeaders.get("client-ip"),
@@ -34,7 +38,14 @@ export default async function RootLayout({
   await addVisit(visit);
 
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={cn(
+        roboto.variable,
+        kaushanScript.variable,
+        "text-lg text-neutral-100"
+      )}
+    >
       <head>
         <link
           rel="apple-touch-icon"
@@ -68,12 +79,8 @@ export default async function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
-      >
-        <ThemeSwitcher />
+      <body className="bg-pattern">
         <div className="min-h-screen">{children}</div>
-        <Footer visitCount={visitCount} />
       </body>
     </html>
   );
