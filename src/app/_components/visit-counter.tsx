@@ -11,7 +11,7 @@ export function VisitCounter({ visitCount }: Props) {
       {digits.split("").map((digit, index) => (
         <div
           key={index}
-          className="bg-gradient-to-t from-stone-900 to-stone-950 py-[2px] px-[4px] text-gray-50"
+          className="bg-linear-to-t from-stone-900 to-stone-950 py-[2px] px-[4px] text-gray-50"
         >
           {digit}
         </div>
