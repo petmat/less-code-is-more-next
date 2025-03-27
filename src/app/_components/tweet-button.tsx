@@ -19,7 +19,7 @@ export function TweetButton({
 }) {
   return (
     <a
-      className="flex items-center gap-1 w-fit rounded-sm bg-sky-500 cursor-pointer py-px px-1"
+      className="flex items-center gap-1 w-fit rounded-xs bg-sky-500 cursor-pointer py-px px-1"
       href={`https://twitter.com/intent/tweet${objToQueryString({
         url,
         text,

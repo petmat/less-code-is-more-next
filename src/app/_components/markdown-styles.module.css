@@ -1,3 +1,5 @@
+@reference "../globals.css"
+
 .markdown {
   @apply text-base leading-relaxed;
 }

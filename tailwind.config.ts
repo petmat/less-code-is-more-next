@@ -50,10 +50,5 @@ const config: Config = {
     },
   },
   plugins: [require("tailwind-highlightjs")],
-  safelist: [
-    {
-      pattern: /hljs+/,
-    },
-  ],
 };
 export default config;
