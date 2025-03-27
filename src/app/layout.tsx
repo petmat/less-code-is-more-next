@@ -4,7 +4,7 @@ import { Roboto, Kaushan_Script } from "next/font/google";
 import cn from "classnames";
 
 import "./globals.css";
-import { addVisit } from "../lib/db";
+import { addVisit } from "../lib/supabase";
 
 const roboto = Roboto({
   weight: "400",
