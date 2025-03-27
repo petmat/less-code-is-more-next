@@ -1,7 +1,7 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
 import { getAllPosts } from "@/lib/api";
-import { getVisitCount } from "../lib/db";
+import { getVisitCount } from "../lib/supabase";
 import { PostPreview } from "./_components/post-preview";
 import { Bio } from "./_components/bio";
 import { VisitCounter } from "./_components/visit-counter";

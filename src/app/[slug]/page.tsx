@@ -5,7 +5,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
-import { getVisitCount } from "../../lib/db";
+import { getVisitCount } from "../../lib/supabase";
 import DateFormatter from "../_components/date-formatter";
 import { Bio } from "../_components/bio";
 import { TweetButton } from "../_components/tweet-button";
